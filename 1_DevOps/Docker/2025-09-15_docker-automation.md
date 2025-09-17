@@ -30,14 +30,6 @@
 
 ---
 
-## 📖 오늘 배운 점 (What I Learned)
-
-- **Docker Compose의 역할:** 여러 컨테이너를 하나의 `yml` 파일로 정의하고 관리함으로써, 복잡한 애플리케이션 스택을 일관성 있게 배포할 수 있다는 것을 배웠다.
-- **리버스 프록시의 중요성:** 마스터 Caddy(또는 Nginx)가 모든 요청의 관문 역할을 함으로써, SSL 인증서 관리, 라우팅을 중앙에서 효율적으로 처리할 수 있다는 것을 이해했다.
-- **파일 시스템 권한:** Docker 볼륨 마운트 시 컨테이너 내부에서 생성된 파일의 소유권이 `root`가 될 수 있으며, 이로 인해 `Permission denied` 오류가 발생할 수 있음을 알게 되었다. `sudo chown`으로 소유권을 변경하여 해결했다.
-- **체계적인 디버깅:** `docker logs`, `docker exec` (컨테이너 내부 접속) 등 다양한 명령어를 활용해 보이지 않는 서버의 문제를 단계적으로 추적하고 원인을 밝혀내는 실전 경험을 쌓았다.
-
----
 
 ## 🔗 참고 자료 (Reference)
 - [Caddy 공식 문서 - reverse_proxy](https://caddyserver.com/docs/caddyfile/directives/reverse_proxy)
