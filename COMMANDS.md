@@ -57,6 +57,20 @@
 
       * **명령어:** `docker ps`
 
+  * **새로 build 해야할 때 명령어:**
+
+      * **설명:** admin, user같이 기존 코드에서 수정이 필요한 경우 빌드 후 복사
+
+            1. yarn build
+            2. cbt_manager 폴더에서 cp -r ~/projects/admin/build/* ./common/www/admin
+
+
+  * ** Error: adapting config using caddyfile: ambiguous site definition: :8003 해결 방법**
+      
+      * **설명:** 사용하지 않는 *.caddy 파일을 제거해줘야 함. 사이트 정의가 모호할 때 caddy가 어떻게 해석해야 할지 모르겠다는 뜻.
+      * **명령어:** sudo rm -f ./common/caddy/sites/*.caddy
+
+
 -----
 
 ### **4. 데이터베이스 직접 수정**
@@ -76,3 +90,15 @@
         ALTER TABLE sub_student_exam_tb MODIFY student_sit INT NOT NULL DEFAULT 0;
         exit;
         ```
+
+```markdown
+## Jenkins
+- **Docker로 Jenkins 실행:**
+  
+  * **설명:** 
+  최초 1회는 위 명령어로 jenkins 설치를 진행함. 현재 caddy에서 8000-9000 포트를 관리하고 있기 때문에 Jenkins의 포트를 9090에서 열었음.
+
+  * **명령어:** 
+  docker run -d -p 9090:8080 -v jenkins_home:/var/jenkins_home --name jenkins-lts jenkins/jenkins:lts-jdk17
+
+  docker start jenkins-lts
