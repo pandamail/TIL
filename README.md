@@ -1,15 +1,19 @@
-# 🌱 TIL (Today I Learned)
+# Today I Learned
+## Recent
+- [ ] TIL/template_problem_solving.md
+- [ ] TIL/template_daily_log.md
+- [ ] TIL/2025-09-15-first.md
+- [ ] 2_Backend/README.md
+- [ ] 2_Backend/2025-09-16-Flask.md
 
-하루하루 배운 내용을 기록합니다.  
-매일 커밋 + 푸시 → GitHub 잔디 심기 목표!  
-
----
-
-## 📅 기록 목록
-- [2025-09-15](./TIL/2025-09-15-first.md) – GitHub 잔디 시작!
-- [2025-09-17](./TIL/2025-09-17%20회고록.md) – CBT 자동배포 시스템 회고
-
----
-
-## 📌 빠른 참조
-- [[자주 사용하는 명령어 모음 (Cheatsheet)]](./COMMANDS.md)
+## All
+- [ ] 1_DevOps/Docker/2025-09-15-docker-automation.md
+- [ ] 1_DevOps/Docker/commands.md
+- [ ] 1_DevOps/Jenkins/2025-09-23-Jenkins-Webhooks-docker.md
+- [ ] 1_DevOps/Jenkins/commands.md
+- [ ] 1_DevOps/README.md
+- [ ] 2_Backend/2025-09-16-Flask.md
+- [ ] 2_Backend/README.md
+- [ ] TIL/2025-09-15-first.md
+- [ ] TIL/template_daily_log.md
+- [ ] TIL/template_problem_solving.md
