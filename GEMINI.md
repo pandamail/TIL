@@ -9,7 +9,6 @@
 - **목적**: 개인적인 학습 내용(TIL)과 기술 프로젝트를 기록하고 관리하는 저장소입니다.
 - **주요 기술**: DevOps(Docker, Jenkins), 백엔드(Flask), 자동화 스크립트에 중점을 두고 있습니다.
 - **핵심 프로젝트**: Docker와 Caddy를 활용한 "CBT 자동화 시스템" 구축 및 운영 기록이 중심을 이룹니다.
-- **사용자**: 실무 경험이 있는 주니어 개발자로, 실용적이고 예제 중심의 설명을 선호합니다.
 
 ## 💬 소통 가이드라인
 - **언어**: 항상 한국어로 대화합니다.
@@ -17,21 +16,22 @@
 - **명령**: 구체적인 파일 경로와 함께 명확한 지시를 제공하면 더 빠르고 정확하게 작업을 수행할 수 있습니다.
 
 ## 📂 프로젝트 구조
-제가 파악한 프로젝트 구조는 다음과 같습니다.
 ```
 TIL/
+├── .github/              # GitHub Actions 워크플로우
+│   └── workflows/
+│       └── update-readme.yml
 ├── 1_DevOps/
-│   ├── Docker/        # Docker 관련 학습 및 명령어
-│   ├── Jenkins/       # Jenkins CI/CD 관련
-│   └── README.md      # DevOps 학습 로드맵
+│   ├── Docker/           # Docker 학습 및 자동화 스크립트
+│   ├── Git/              # Git 관련 학습 및 팁
+│   └── Jenkins/          # Jenkins CI/CD 파이프라인
 ├── 2_Backend/
-│   └── README.md      # Backend 개발 노트
-├── 3_Web_concepts/    # 웹 개념 학습
-├── TIL/               # 일일 학습 기록 (회고록)
-├── .gitignore         # Git 추적 제외 파일 목록
-├── CLAUDE.md          # (참고용) 이전 AI 어시스턴트 가이드
-├── COMMANDS.md        # 주요 명령어 모음
-└── README.md          # 프로젝트 메인 문서
+│   └── Flask 관련 학습 내용
+├── 3_Test_Automation/
+│   └── Playwright/       # Playwright E2E 테스트 자동화
+├── Algorithm/            # 알고리즘 문제 풀이
+├── assets/               # 이미지 등 정적 파일
+└── TIL/                  # 일일 학습 기록 (회고록)
 ```
 
 ## 🛠️ 제미나이 활용법

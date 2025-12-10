@@ -537,3 +537,69 @@
    - 현재 상태:
        - '체크 문제' 필터링 테스트의 남은 문제를 해결해야 합니다.
        - '미응답 문제' 필터링 테스트를 최종적으로 검증해야 합니다.
+
+  ---
+
+  19. operation.spec.ts 테스트 리팩토링 및 정리 로직 추가 (2025-11-11)
+
+   - 목표: operation.spec.ts 파일의 테스트 안정성을 높이고, 테스트 후 생성된 데이터를 자동으로 정리하는 로직을 추가합니다.
+   - 과정:
+       1. `test.describe.serial` 적용: operation.spec.ts 파일 전체에 test.describe.serial을 적용하여 테스트가 순차적으로 실행되도록
+          변경했습니다.
+       2. `ensureCompletedExamIsVisible` 헬퍼 적용: 파일 내 모든 TODO 주석을 ensureCompletedExamIsVisible 헬퍼 함수 호출로 대체하여
+          페이지네이션 문제를 해결하고 테스트 안정성을 높였습니다.
+       3. 개별 테스트 정리 로직 추가:
+           * 각 테스트(1단계부터 7단계까지)에서 생성된 시험의 examName을 describe 스코프에 선언된 변수(examName1 ~ examName7)에
+             할당하도록 수정했습니다.
+           * deleteExam 헬퍼 함수를 operation.spec.ts에 추가했습니다.
+           * 각 테스트의 마지막에 시험 상태를 '준비중'으로 되돌리는 로직을 추가했습니다. (예: '입실' → '준비중', '시작' → '준비중',
+             '종료' → '준비중', '숨김' → '준비중')
+           * afterAll 훅을 추가하여, 모든 테스트가 완료된 후 examName1부터 examName7까지의 시험들을 '작성 중 시험' 탭에서 일괄
+             삭제하도록 구현했습니다.
+       4. 테스트 6, 7번 리팩토링:
+           * Test 6(종료된 시험을 숨길 수 있으며...)의 정리 로직에 '숨기기 취소' 기능까지 포함하도록 수정했습니다.
+           * Test 7(숨긴 시험을 숨기기 취소할 수 있으며...)은 Test 6의 정리 로직에 의해 기능 검증이 중복되므로 삭제했습니다.
+           * examName7 변수 선언 및 afterAll 훅의 관련 삭제 로직도 함께 제거했습니다.
+       5. 결과: operation.spec.ts 파일은 이제 모든 테스트가 순차적으로 실행되며, 각 테스트에서 생성된 시험 데이터가 테스트 종료 후
+          자동으로 정리되는 안정적인 상태가 되었습니다.
+
+  20. operation.spec.ts 통합 시나리오 리팩토링 제안 및 구현 (2025-11-11)
+   - 목표: operation.spec.ts의 중복된 정리 로직을 줄이고, 시험의 전체 생명주기를 하나의 통합된 시나리오로 검증하는 더 간결하고
+     효율적인 테스트 구조를 제안하고 구현했습니다.
+   - 과정:
+       1. "하나의 시나리오" 구조 제안: 각 테스트가 독립적으로 시험을 생성하고 정리하는 대신, 단 하나의 시험을 생성하여 모든 테스트가
+          이 시험의 상태를 순차적으로 변경하며 검증하고, 마지막 테스트에서 모든 정리(숨기기 취소 → 준비중 변경 → 삭제)를 수행하는
+          구조를 제안했습니다.
+       2. `operation.refactored.spec.ts` 파일 생성: 제안된 구조를 적용한 tests/step5/operation.refactored.spec.ts 파일을 새로
+          생성했습니다.
+       3. 오류 디버깅:
+           * createExam 헬퍼 함수 내의 URL 검증(await expect(page).toHaveURL('/exam/draft/');)이 쿼리 파라미터로 인해 실패하는 문제를
+             await expect(page).toHaveURL(/\/exam\/draft/);로 수정했습니다.
+           * 다운로드 파일명 검증 정규식(expectedFilenamePattern)에서 백슬래시(\d)와 괄호(()) 이스케이프(\\d, \\(, \\))가 누락되어
+             발생한 오류를 수정했습니다.
+       4. 결과: operation.refactored.spec.ts 파일은 이제 통합된 시나리오로 시험의 전체 생명주기를 검증하며, 테스트 데이터가 깔끔하게
+          정리되는 안정적인 상태가 되었습니다. (사용자 요청에 따라 원본 operation.spec.ts 파일은 유지됨)
+
+  21. exam.spec.ts 정리 로직 추가 계획 및 exam.refactored.spec.ts 생성 (2025-11-11)
+
+   - 목표: exam.spec.ts 파일 내에 테스트 후 생성된 시험 데이터를 정리하는 로직을 추가하여 테스트 환경을 깨끗하게 유지합니다.
+   - 과정:
+       1. 문제 분석: exam.spec.ts의 1-3 테스트에서 복사된 시험, 2. 시험 응시자 등록 그룹, 3. 시험 문제 등록 그룹에서 생성된 시험들이
+          테스트 종료 후 삭제되지 않고 남아있는 문제를 확인했습니다.
+       2. 정리 계획 수립: step5에서 성공적으로 적용했던 afterAll 훅과 deleteExam 헬퍼 함수를 활용하여 각 describe 블록이 생성한 시험을
+          스스로 정리하도록 계획을 수립했습니다.
+       3. `exam.refactored.spec.ts` 파일 생성: 계획된 정리 로직을 적용한 tests/step4/exam.refactored.spec.ts 파일을 새로 생성했습니다.
+
+  22. user-exam.spec.ts 오류 진단 (2025-11-11)
+
+   - 목표: Jenkins 환경에서 tests/step6/user-exam.spec.ts 파일의 테스트가 실패하는 원인을 진단합니다.
+   - 과정:
+       1. 에러 로그 분석: tests/step6/error_log.txt 파일을 분석하여 loginAsStudentAndGoToWaiting 헬퍼 함수 내의
+          input[name="exam_auth_no"] 요소(과목인증번호 입력 필드)를 찾지 못해 타임아웃이 발생했음을 확인했습니다.
+       2. 원인 추정: URL은 올바르지만, Jenkins 환경에서 테스트 준비(시험 생성, 상태 변경 등)가 예상과 다르게 진행되어 해당 입력 필드가
+          포함된 페이지가 제대로 로드되지 않았을 가능성이 높다고 진단했습니다.
+       3. 해결 방안 제안: loginAsStudentAndGoToWaiting 함수에 await expect(page.getByRole('heading', { name: '로그인'
+          })).toBeVisible();와 같이 페이지의 핵심 요소(예: "로그인" 제목)가 보이는지 명시적으로 확인하는 검증 단계를 추가하여 테스트
+          안정성을 높이고 디버깅 정보를 개선할 것을 제안했습니다.
+
+  ---
