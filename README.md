@@ -1,19 +1,19 @@
-# Today I Learned
-## Recent
-- [ ] TIL/template_problem_solving.md
-- [ ] TIL/template_daily_log.md
-- [ ] TIL/2025-09-15-first.md
-- [ ] 2_Backend/README.md
-- [ ] 2_Backend/2025-09-16-Flask.md
+# 👋 Today I Learned (TIL) - 엄태혁
 
-## All
-- [ ] 1_DevOps/Docker/2025-09-15-docker-automation.md
-- [ ] 1_DevOps/Docker/commands.md
-- [ ] 1_DevOps/Jenkins/2025-09-23-Jenkins-Webhooks-docker.md
-- [ ] 1_DevOps/Jenkins/commands.md
-- [ ] 1_DevOps/README.md
-- [ ] 2_Backend/2025-09-16-Flask.md
-- [ ] 2_Backend/README.md
-- [ ] TIL/2025-09-15-first.md
-- [ ] TIL/template_daily_log.md
-- [ ] TIL/template_problem_solving.md
+꾸준한 학습과 기록을 통해 인프라/전산 운영 역량을 다지고 있습니다.
+실습 중심으로 이해한 내용을 제 언어로 정리하는 것을 목표로 합니다.
+
+## 📂 구조
+01_Infrastructure   - 서버, OS, 네트워크 기초 및 실습
+02_Backend          - 기본 개념 정리
+03_Test_Automation  - Playwright E2E 테스트
+99_TIL              - 잡학 지식 및 트러블슈팅
+
+## 🧩 최근 추가한 문서
+
+
+## 🎯 목표
+- 운영 자동화 스크립트 작성 역량 강화
+- 서버/네트워크 기본기 다지기
+- 트러블슈팅 로그 정리 & 재발 방지 매뉴얼 축적
+
