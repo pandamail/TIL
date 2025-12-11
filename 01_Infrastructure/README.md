@@ -5,9 +5,6 @@
 - [x] Docker Compose
 - [x] 컨테이너 오케스트레이션
 - [x] Jenkins CI/CD
-- [ ] Kubernetes 기초
-- [ ] GitOps (ArgoCD)
-- [ ] 모니터링 (Prometheus, Grafana)
 
 ## 🎯 핵심 개념
 
@@ -28,13 +25,11 @@
 - **기간**: 2025.09
 - **기술**: Docker, Caddy, MySQL
 - **성과**: 멀티테넌트 환경 자동 배포 구축
-- [상세 회고](./Docker/2025-09-17_CBT환경_자동배포_시스템_구축_회고.md)
 
 ## 🛠 자주 사용하는 도구
 - Docker & Docker Compose
 - Jenkins
 - Caddy (리버스 프록시)
-- Shell Scripting
 
 ## 📖 참고 자료
 - [Docker 공식 문서](https://docs.docker.com)
