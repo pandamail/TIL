@@ -49,7 +49,7 @@ Jenkins CI 환경에서 발생한 Race Condition(병렬 실행 시 DB 경합)을
 - [Gemini Agent 자동화 강의 2일차](99_TIL/2026/05/2026-05-07-Gemini-Agent-자동화-강의-2일차.md) — 프롬프트 설계, 컨텍스트 분리 실전 전략
 - [Gemini Agent 자동화 강의 1일차](99_TIL/2026/05/2026-05-06-Gemini-Agent-자동화-강의-1일차.md) — AI Agent 개념, NotebookLM, 바이브 코딩
 - [컴활1급 필기 4일차](99_TIL/2026/04/2026-04-28-컴활1급-필기-4일차.md)
-- [Supabase 환경 분리 (dev/prod) 구성](02_Backend/2026-02-supabase-환경분리.md)
+- [컴활1급 필기 3일차](99_TIL/2026/04/2026-04-23-컴활1급-필기-3일차.md)
 
 ---
 
