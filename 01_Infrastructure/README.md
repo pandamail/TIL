@@ -13,6 +13,7 @@
 |------|------|
 | [SimMonitor 아키텍처](2026-02-25-SimMonitor-Architecture.md) | 시스템 구조, 기술 스택, Mermaid 파이프라인 다이어그램 |
 | [SimMonitor 트러블슈팅](2026-02-25-SimMonitor-Troubleshooting.md) | 개발 중 발생한 주요 이슈 및 해결 과정 |
+| [SimMonitor 프로젝트 회고록](RETROSPECTIVE_2026-01.md) | 5주간 개발 전체를 아우르는 작업 일지 + 회고 (2026.01.13 ~ 2026.02.02) |
 | [SIMPREC 아키텍처](2026-02-25-Simprec-Architecture.md) | 녹화 관리 웹 시스템(FastAPI + React + MySQL) 구조 |
 | [SIMPREC 트러블슈팅](2026-02-25-Simprec-Troubleshooting.md) | SIMPREC 연동 중 발생한 이슈 해결 |
 
