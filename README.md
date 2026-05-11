@@ -37,8 +37,10 @@ Flask + Docker + Caddy로 구축한 학교별 CBT 환경 자동 배포 시스템
 → [구축 회고](01_Infrastructure/Docker/2025-09-17-CBT환경-자동배포-시스템-구축-회고.md)
 
 ### Playwright E2E 테스트 자동화 (2025.10 ~ 2026.01, 인턴)
-CBT 시스템 전체 플로우를 커버하는 E2E 테스트 자동화 구축. Jenkins CI 연동.
-→ [테스트 문서](03_Test_Automation/)
+CBT 시스템의 로그인부터 시험 응시까지 step1~6 전 플로우를 커버하는 E2E 테스트 스위트 단독 구축.
+Jenkins CI 환경에서 발생한 Race Condition(병렬 실행 시 DB 경합)을 `serial` 실행 + 방어적 탐색 하이브리드 전략으로 해결했으며,
+테스트 실패를 분석하는 과정에서 실제 서비스 코드의 비동기 버그를 발견·수정하는 성과로 이어짐. Chromium·Firefox·WebKit 크로스 브라우저 전 구간 통과.
+→ [개발 작업일지 (22세션, 600줄+)](03_Test_Automation/Playwright/2025-10-CBT-Playwright-개발-작업일지.md) · [CI 안정화 전략](03_Test_Automation/Playwright/2025-10-21-테스트안정화_전략.md)
 
 ---
 
