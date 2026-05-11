@@ -28,7 +28,9 @@ Vercel 배포, Supabase DB 연동, dev/prod 환경 분리까지 단독 진행.
 
 ### SimMonitor (2025.08 ~ 2026.02, 인턴)
 의료 시뮬레이터 연동 미들웨어 단독 개발. LLEAP 시뮬레이터와 녹화 관리 시스템 사이의 실시간 데이터 파이프라인 구축.
-→ [시스템 아키텍처](01_Infrastructure/2026-02-25-SimMonitor-Architecture.md) · [트러블슈팅](01_Infrastructure/2026-02-25-SimMonitor-Troubleshooting.md)
+→ [SimMonitor 아키텍처](01_Infrastructure/2026-02-25-SimMonitor-Architecture.md) · [SimMonitor 트러블슈팅](01_Infrastructure/2026-02-25-SimMonitor-Troubleshooting.md)
+→ [SIMPREC 아키텍처](01_Infrastructure/2026-02-25-Simprec-Architecture.md) · [SIMPREC 트러블슈팅](01_Infrastructure/2026-02-25-Simprec-Troubleshooting.md)
+→ [프로젝트 전체 회고록](01_Infrastructure/RETROSPECTIVE_2026-01.md)
 
 ### CBT 자동화 시스템 (2025.09, 인턴)
 Flask + Docker + Caddy로 구축한 학교별 CBT 환경 자동 배포 시스템.
