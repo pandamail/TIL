@@ -45,3 +45,9 @@ for test_case in range(1, T + 1):
             answer += 1
 
     print(f'#{test_case} {answer}')
+
+
+# ※ 꼭 기억할 것
+# 1. 줄 끝 체크 필수: for문이 끝난 후 count == K 조건을 한 번 더 확인해야 마지막 구간을 놓치지 않음
+# 2. count 리셋 위치: else 블록 안에서만 리셋 (for문 밖에 두면 매번 초기화되어 버그)
+# 3. 세로 탐색 인덱스: puzzle[row][col] — 행·열 순서 헷갈리지 않도록 주의
