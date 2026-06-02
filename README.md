@@ -31,6 +31,7 @@ AI 도구를 적극 활용한 실무 중심 개발을 지향합니다.
 | [`03_Test_Automation`](03_Test_Automation/) | Playwright 기반 자동화 테스트 |
 | [`98_Algorithm`](98_Algorithm/) | 알고리즘 풀이 기록 |
 | [`99_TIL`](99_TIL/) | 일별 작업 로그 (YYYY/MM/YYYY-MM-DD 형식) |
+| [`interview`](interview/) | 면접 준비 자료 |
 
 ---
 
@@ -46,6 +47,7 @@ Vercel 배포, Supabase DB 연동, dev/prod 환경 분리까지 단독 진행.
 → [SimMonitor 아키텍처](01_Infrastructure/2026-02-25-SimMonitor-Architecture.md) · [SimMonitor 트러블슈팅](01_Infrastructure/2026-02-25-SimMonitor-Troubleshooting.md)
 → [SIMPREC 아키텍처](01_Infrastructure/2026-02-25-Simprec-Architecture.md) · [SIMPREC 트러블슈팅](01_Infrastructure/2026-02-25-Simprec-Troubleshooting.md)
 → [프로젝트 전체 회고록](01_Infrastructure/RETROSPECTIVE_2026-01.md)
+→ [인턴 업무 정리 (면접 대비)](interview/IBST-인턴-업무정리.md)
 
 ### CBT 자동화 시스템 (2025.09, 인턴)
 Flask + Docker + Caddy로 구축한 학교별 CBT 환경 자동 배포 시스템.
@@ -61,14 +63,14 @@ Jenkins CI 환경에서 발생한 Race Condition(병렬 실행 시 DB 경합)을
 
 ## 📝 Recent TIL
 
+- [경남대 면접 준비 — 공백기 회고](99_TIL/2026/06/2026-06-02-회고록.md) — 시험 이후 흐름 정리, 경남대 전산팀 서류 통과, 6/9 면접 예정
+- [SSAFY 적성진단 회고](99_TIL/2026/05/2026-05-23-SSAFY적성진단-회고.md) — 80분 코딩테스트, D2 문제 미통과, 구현 감각의 중요성
 - [SSAFY D-2 — DFS 첫 경험과 마름모 탐색](99_TIL/2026/05/2026-05-21-SSAFY적성진단-알고리즘D2.md) — D3·D4 첫 도전, DFS·마름모·스도쿠 패턴 체득
 - [SSAFY D-4 — 확실한 문제 3개 확보](99_TIL/2026/05/2026-05-19-SSAFY적성진단-알고리즘D4.md) — 정렬·단어퍼즐 통과, 2차원 배열 탐색 패턴 정리
 - [SSAFY D-5 — 에세이 제출 + 알고리즘 D2](99_TIL/2026/05/2026-05-18-SSAFY적성진단-에세이제출-알고리즘D2.md) — 지원 에세이 제출, 슬라이딩·회전 패턴 학습
 - [SSAFY 알고리즘 3일차 — 달팽이 문제](99_TIL/2026/05/2026-05-14-SSAFY적성진단-알고리즘D2달팽이.md) — 나선형 탐색, 방향 배열과 % 4 순환 전환
 - [SSAFY 알고리즘 2일차 — D2 격자 탐색 도전](99_TIL/2026/05/2026-05-13-SSAFY적성진단-알고리즘D2도전.md) — 파리 퇴치 4중 루프, 격자 탐색 공식 체득
 - [머신러닝을 활용한 데이터 분석 (중급)](99_TIL/2026/05/2026-05-12-머신러닝-데이터분석-중급.md) — 앙상블 6종·변수선택·BERT Fine-tuning, 정형→비정형 성능 계단식 향상
-- [SSAFY 적성진단 대비 알고리즘 D1 시작](99_TIL/2026/05/2026-05-12-SSAFY적성진단-알고리즘D1시작.md) — D1 문제 12개+D2 1개, 오랜만에 알고리즘 복귀
-- [데이터 분석 기초 및 데이터 활용 이해 강의](99_TIL/2026/05/2026-05-11-데이터분석기초-데이터활용이해-강의.md) — 민간 데이터 특성, 분석 기획 4단계, 교차·지수화·시계열 분석
 
 ---
 
