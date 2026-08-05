@@ -28,14 +28,15 @@ TIL/
 ├── 04_PublicSector/      # 공공기관 사업관리 프로세스/패턴 기록 (자체 CLAUDE.md 있음, 포함금지 목록 필독)
 ├── 98_Algorithm/         # 알고리즘 풀이
 ├── 99_TIL/               # 일별 학습/근무 로그 (99_TIL/YYYY/MM/YYYY-MM-DD-제목.md)
-└── decisions/            # 커리어 등 굵직한 의사결정 기록 (Decision Record)
+├── decisions/            # 커리어 등 굵직한 의사결정 기록 (Decision Record)
+└── portfolio/            # 이력·포트폴리오 마크다운 버전 (자체 CLAUDE.md 있음, 원본 PPT/HWP는 git에 올리지 않음)
 ```
 
 ### README 네비게이션 원칙
 
 - **루트 README**: 전체 카테고리 테이블 + 주요 프로젝트 + Recent TIL
 - **각 폴더 README**: 해당 폴더 내 문서 목록 + 각 문서 1줄 요약 + 링크
-- 현재 `01_Infrastructure`, `04_PublicSector`만 README 존재. 나머지 폴더는 README 없음 → 작성 기회 있을 때 제안할 것
+- 현재 `01_Infrastructure`, `04_PublicSector`, `portfolio`만 README 존재. 나머지 폴더는 README 없음 → 작성 기회 있을 때 제안할 것
 
 ---
 
@@ -69,6 +70,12 @@ TIL/
 - **모든 문서에 공통 적용**: 기업명·금액·개인 실명·미공개 문서 원문·위원 명단 등은 절대 포함하지 않는다. 상세 기준은 [04_PublicSector/CLAUDE.md](04_PublicSector/CLAUDE.md) 참고 — 이 기준은 04_PublicSector 폴더뿐 아니라 99_TIL이나 decisions/에 근무 관련 내용을 쓸 때도 동일하게 적용한다.
 - 원본 업무 자료는 로컬 `문서/` 폴더(이 저장소 바깥)에만 두고, git에는 익명화·일반화된 결과물만 커밋한다.
 - 애매하면 추측해서 쓰지 말고 먼저 사용자에게 확인한다.
+
+### 포트폴리오 (portfolio/)
+
+- PPT·HWP·PDF 원본은 git에 올리지 않는다. 개인 PC에만 보관하고, TIL에는 마크다운 변환본만 둔다.
+- 대외 공개 문서이므로 공공기관 근무 문서 규칙(위 항목)을 동일하게, 오히려 더 엄격하게 적용한다.
+- 상세 구성·업데이트 시점은 [portfolio/CLAUDE.md](portfolio/CLAUDE.md) 참고.
 
 ---
 

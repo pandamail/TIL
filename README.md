@@ -38,6 +38,7 @@ AI 도구를 적극 활용한 실무 중심 개발을 지향합니다.
 | [`99_TIL`](99_TIL/) | 일별 작업/근무 로그 (YYYY/MM/YYYY-MM-DD 형식) |
 | [`interview`](interview/) | 면접 준비 자료 |
 | [`decisions`](decisions/) | 커리어 등 굵직한 의사결정 기록 |
+| [`portfolio`](portfolio/) | 이력·포트폴리오 마크다운 버전 |
 
 ---
 
